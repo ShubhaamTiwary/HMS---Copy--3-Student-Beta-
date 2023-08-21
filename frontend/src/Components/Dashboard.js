@@ -49,7 +49,7 @@ const Dashboard = () => {
 
 
         {/* All Buttons */}
-        <a href='http://localhost:3000/'>
+        <a href='https://hms-copy-3-student-beta.vercel.app/'>
         <div className='w-full flex flex-row justify-center mt-20'>
             <button className="bg-slate-100 w-2/3 bg-sl border-2 py-2 px-4 border-slate-950 rounded-l-full rounded-r-full">
                 <p className='w-full text-center font-popins text-sm text-slate-700'>Dashboard <p className='inline text-orange-400 text-base ml-1'>✦</p></p>
@@ -82,15 +82,15 @@ const Dashboard = () => {
         
       <Routes>
         <Route path="/" element={<DashboardPage />} />
-        <Route path="/hostel-Registration" element={<HostelRegistration />} />
-        <Route path="/tower-Registration" element={<TowerRegistartion />} />
-        <Route path="/wing-Registration" element={<WingRegistration />} />
-        <Route path="/room-Registration" element={<RoomRegistration />} />
-        <Route path="/student-Registration" element={<StudentRegistartion />} />
-        <Route path="/expense-Allocation" element={<ExpenseForm />} />
-        <Route path="/room-Allocation" element={<RoomAllocation />} />
-        <Route path="/hostel-FormReview" element={<HostelReviewForm />} />
-        <Route path="/student-FormReview" element={<StudentReviewForm />} />
+        <Route path="https://hms-copy-3-student-beta.vercel.app/hostel-Registration" element={<HostelRegistration />} />
+        <Route path="https://hms-copy-3-student-beta.vercel.app/tower-Registration" element={<TowerRegistartion />} />
+        <Route path="https://hms-copy-3-student-beta.vercel.app/wing-Registration" element={<WingRegistration />} />
+        <Route path="https://hms-copy-3-student-beta.vercel.app/room-Registration" element={<RoomRegistration />} />
+        <Route path="https://hms-copy-3-student-beta.vercel.app/student-Registration" element={<StudentRegistartion />} />
+        <Route path="https://hms-copy-3-student-beta.vercel.app/expense-Allocation" element={<ExpenseForm />} />
+        <Route path="https://hms-copy-3-student-beta.vercel.app/room-Allocation" element={<RoomAllocation />} />
+        <Route path="https://hms-copy-3-student-beta.vercel.app/hostel-FormReview" element={<HostelReviewForm />} />
+        <Route path="https://hms-copy-3-student-beta.vercel.app/student-FormReview" element={<StudentReviewForm />} />
       </Routes>
       </div>
     </div>
