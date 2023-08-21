@@ -963,9 +963,8 @@ const saved_form_6 = async (req, res) => {
             res.status(500).send("Data not inserted");
                 }
         }
-        
     };
- 
+
 // will be done by rector
 const student_registration  =  async(req,res)=>{
     const { 
@@ -993,7 +992,7 @@ const student_registration  =  async(req,res)=>{
         handicapped_type,
         orphan,
         personal_mobile,
-        parent_mobile:
+        parent_mobile,
         teacher_mobile,
         personal_email,
         parent_email,
@@ -1016,9 +1015,83 @@ const student_registration  =  async(req,res)=>{
         ifsc,
         account_number,
         hostel_name_or_id,
-        status
+        status,
+        student_id,
     } = (req.body);
 
+    const documents = await getDocs(collection(db, "student_registration"));
+        const data2 = {};
+        documents.forEach((doc) => {
+            data2[doc.data().student_id] = doc.id;
+        });
+    
+        const keys = Object.keys(data2);
+    for( let i = 0;i< keys.length;i++){
+        if (student_id == keys[i]) {
+            try {
+                const docRef = doc(db,"student_registration",data2[student_id])
+                await updateDoc(docRef,{
+                    first_name,
+                    last_name,
+                    father_name,
+                    mother_name,
+                    address1,
+                    address2,
+                    country,
+                    state,
+                    city,
+                    pincode,
+                    gender,
+                    aadhar_id,
+                    dob,
+                    height,
+                    weight,
+                    blood_group,
+                    medical_history,
+                    medicine_taken,
+                    birth_mark,
+                    handicapped,
+                    handicapped_per,
+                    handicapped_type,
+                    orphan,
+                    personal_mobile,
+                    parent_mobile,
+                    teacher_mobile,
+                    personal_email,
+                    parent_email,
+                    teacher_email,
+                    collage_name,
+                    principle_name,
+                    religon,
+                    category,
+                    income,
+                    college_address1,
+                    college_address2,
+                    photo_file,
+                    aadhar_file,
+                    caste_file,
+                    medical_file,
+                    income_cer,
+                    bank_details,
+                    account_holder_name,
+                    bank_name,
+                    ifsc,
+                    account_number,
+                    hostel_name_or_id,
+                    status,
+                    student_id,
+                }); 
+                const message = 'Updated with id ' +  student_id;
+                res.send(message);
+            } catch (error) {
+                console.log(error);
+                res.status(500).send("Data not Updated");
+            }
+        }
+    }
+
+
+if(student_id == null || student_id == undefined || student_id == ""){
 const ans1 = await studentIdFunction(null);
 
 try
@@ -1048,7 +1121,7 @@ try
         handicapped_type,
         orphan,
         personal_mobile,
-        parent_mobile:
+        parent_mobile,
         teacher_mobile,
         personal_email,
         parent_email,
@@ -1082,6 +1155,7 @@ catch(e){
 }
 res.send("Data Inserted with id "+(ans1+1));
 
+    }
 }
 
 
