@@ -82,15 +82,15 @@ const Dashboard = () => {
         
       <Routes>
         <Route path="/" element={<DashboardPage />} />
-        <Route path="https://hms-copy-3-student-beta.vercel.app/hostel-Registration" element={<HostelRegistration />} />
-        <Route path="https://hms-copy-3-student-beta.vercel.app/tower-Registration" element={<TowerRegistartion />} />
-        <Route path="https://hms-copy-3-student-beta.vercel.app/wing-Registration" element={<WingRegistration />} />
-        <Route path="https://hms-copy-3-student-beta.vercel.app/room-Registration" element={<RoomRegistration />} />
-        <Route path="https://hms-copy-3-student-beta.vercel.app/student-Registration" element={<StudentRegistartion />} />
-        <Route path="https://hms-copy-3-student-beta.vercel.app/expense-Allocation" element={<ExpenseForm />} />
-        <Route path="https://hms-copy-3-student-beta.vercel.app/room-Allocation" element={<RoomAllocation />} />
-        <Route path="https://hms-copy-3-student-beta.vercel.app/hostel-FormReview" element={<HostelReviewForm />} />
-        <Route path="https://hms-copy-3-student-beta.vercel.app/student-FormReview" element={<StudentReviewForm />} />
+        <Route path="/hostel-Registration" element={<HostelRegistration />} />
+        <Route path="/tower-Registration" element={<TowerRegistartion />} />
+        <Route path="/wing-Registration" element={<WingRegistration />} />
+        <Route path="/room-Registration" element={<RoomRegistration />} />
+        <Route path="/student-Registration" element={<StudentRegistartion />} />
+        <Route path="/expense-Allocation" element={<ExpenseForm />} />
+        <Route path="/room-Allocation" element={<RoomAllocation />} />
+        <Route path="/hostel-FormReview" element={<HostelReviewForm />} />
+        <Route path="/student-FormReview" element={<StudentReviewForm />} />
       </Routes>
       </div>
     </div>
