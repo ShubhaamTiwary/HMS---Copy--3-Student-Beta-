@@ -1994,14 +1994,10 @@ const Page4 = ({currentPage,previousPage,formData,setFormData,display,edit,revie
                 <img src={BgImg} className='absolute h-36 w-36 ml-[-40px]' />
               </div>
               <div className='w-52 flex flex-col justify-center'>
-                {edit || review ?
-                <button className={`h-10 ${sendForm ? 'bg-gray-500' : 'bg-accent2'}  text-lg font-semibold text-white border-none rounded-2xl mt-5`} 
-                disabled={sendForm}
+                <button className={`h-10 ${sendForm ? 'bg-gray-500' : 'bg-accent2'}  text-lg font-semibold text-white border-none rounded-2xl mt-5`}
                 >
                   Save 
                 </button>
-                :null
-                }
                 <button onClick={handlePrevPage} className='h-10 bg-accent2 text-lg font-semibold text-white border-none rounded-2xl mt-5'>
                   Previous Page 
                 </button>
