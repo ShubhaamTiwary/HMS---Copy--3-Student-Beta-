@@ -1016,6 +1016,7 @@ const student_registration  =  async(req,res)=>{
         ifsc,
         account_number,
         hostel_name_or_id,
+        status
     } = (req.body);
 
 const ans1 = await studentIdFunction(null);
@@ -1070,6 +1071,7 @@ try
         ifsc,
         account_number,
         hostel_name_or_id,
+        status,
         student_id:(ans1+1)
     });
 }
